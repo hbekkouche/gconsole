@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Groovy Console</title>
+        <link href="resources/gc/bootstrap3/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/gc/ace/ace.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/gc/css/gc.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <div id="editor"></div>
+
+
+        <span class="btn btn-primary" onclick="doSend()">
+            #{COMMON.btn_run}
+            <span class="glyphicon glyphicon-play"></span>
+        </span>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">#{COMMON.result}:</h3>
+            </div>
+            <div id="result" class="panel-body result">
+
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab">
+            <li id="hp1" class="active"><a href="#p1" data-toggle="tab"><span class="glyphicon glyphicon-log-in"/> #{COMMON.output}</a></li>
+            <li id="hp2"><a href="#p2" data-toggle="tab"><span class="glyphicon glyphicon-info-sign" /> #{COMMON.stacktrace}</a></li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="p1">
+                <div class="panel panel-default">
+                    <div class="panel-body output">
+                        <pre id="output"></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="p2">
+                <div class="panel panel-default">
+                    <div class="panel-body stackTrace">
+                        <span id="stackTrace" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="resources/gc/jquery/jquery-2.0.2.js" type="text/javascript"></script>
+        <script src="resources/gc/bootstrap3/bootstrap.min.js" type="text/javascript"></script>
+        <script src="resources/gc/ace/ace.js" type="text/javascript"></script>
+        <script src="resources/gc/ace/ace-init.js" type="text/javascript"></script>
+        <script src="resources/gc/js/gc.js" type="text/javascript"></script>
+    </h:body>
+
+</html>
+

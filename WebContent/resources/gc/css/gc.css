@@ -1,0 +1,24 @@
+.panel-body{
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+
+.result{
+    background-color: #d9edf7;
+    min-height: 50px;
+}
+
+
+.output,.output>pre{
+    background-color: #333;
+    color: ivory;
+    border: none;
+    margin: none;
+    padding: none;
+}
+
+
+.stackTrace{
+    background-color: #333;
+    color: #e4b9b9;
+}
